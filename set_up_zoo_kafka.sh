@@ -2,8 +2,13 @@
 
 apt update && apt install -y curl git openjdk-11-jdk
 
-curl https://mirror.its.dal.ca/apache/kafka/2.6.0/kafka_2.13-2.6.0.tgz > kafka.tgz
+### go to this https://kafka.apache.org/downloads to check for new version
+curl https://mirror.its.dal.ca/apache/kafka/2.6.0/kafka_2.13-2.6.0.tgz > all_files.tgz
 
-tar xzf kafka.tgz
+tar xzf all_files.tgz
+
+EXTRACTED=`ls | grep kafka`
+
+mv $EXTRACTED /opt/kafka
 
 #mv kafka /opt/kafka
