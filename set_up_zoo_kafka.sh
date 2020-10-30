@@ -15,5 +15,11 @@ mv $EXTRACTED /opt/kafka
 cp services_conf/zookeeper.service /etc/systemd/system/zookeeper.service
 cp services_conf/kafka.service /etc/systemd/system/kafka.service
 
+systemctl daemon-reload
+
+### start Kafka and Zookeeper
+systemctl start zookeeper
+systemctl start kafka
+
 
 #mv kafka /opt/kafka
