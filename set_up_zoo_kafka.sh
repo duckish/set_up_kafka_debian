@@ -11,4 +11,9 @@ EXTRACTED=`ls | grep kafka`
 
 mv $EXTRACTED /opt/kafka
 
+### set up services
+cp services_conf/zookeeper.service /etc/systemd/system/zookeeper.service
+cp services_conf/kafka.service /etc/systemd/system/kafka.service
+
+
 #mv kafka /opt/kafka
