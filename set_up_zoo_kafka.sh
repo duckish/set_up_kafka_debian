@@ -9,6 +9,7 @@ tar xzf all_files.tgz
 
 EXTRACTED=`ls | grep kafka`
 
+mkdir -p /opt/kafka
 mv $EXTRACTED /opt/kafka
 
 ### set up services
